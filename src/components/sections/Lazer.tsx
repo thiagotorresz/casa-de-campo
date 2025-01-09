@@ -4,20 +4,20 @@ const Lazer = () => {
   const [activeOption, setActiveOption] = useState(0);
 
   const options = [
-    { id: 0, title: "RECREAÇÃO", icon: "public/img/icons/recreacao.png", image: "public/img/atividades/recreacao.png" },
-    { id: 1, title: "PASSEIO A CAVALO", icon: "public/img/icons/passeio.png", image: "public/img/atividades/cavalo.png" },
-    { id: 2, title: "FAZENDINHA", icon: "public/img/icons/fazendinha.png", image: "public/img/atividades/fazendinha.png" },
-    { id: 3, title: "PISCINAS", icon: "public/img/icons/piscinas.png", image: "public/img/atividades/pool.png" },
-    { id: 4, title: "OFURÔS", icon: "public/img/icons/ofuros.png", image: "public/img/atividades/ofuro.jpg" },
-    { id: 5, title: "QUADRAS", icon: "public/img/icons/quadras.png", image: "public/img/atividades/sport.png" },
-    { id: 6, title: "SINUCA", icon: "public/img/icons/sinuca.png", image: "public/img/atividades/sinuca.png" },
-    { id: 7, title: "BOLICHE", icon: "public/img/icons/boliche.png", image: "public/img/atividades/boliche.png" },
-    { id: 8, title: "ESPAÇO KIDS", icon: "public/img/icons/kids.png", image: "public/img/atividades/kids.png" },
-    { id: 9, title: "CINEMA", icon: "public/img/icons/cinema.png", image: "public/img/atividades/cine.png" },
-    { id: 10, title: "PRAIA VILLAGE", icon: "public/img/icons/praia.png", image: "public/img/atividades/beach.png" },
-    { id: 11, title: "ADVENTURE", icon: "public/img/icons/adventure.png", image: "public/img/atividades/adventure.png" },
-    { id: 12, title: "SPA", icon: "public/img/icons/spa.png", image: "public/img/atividades/spa.png" },
-    { id: 13, title: "RESTAURANTES", icon: "public/img/icons/restaurantes.png", image: "public/img/atividades/restaurante.png" },
+    { id: 0, title: "RECREAÇÃO", icon: "/casa-de-campo/img/icons/recreacao.png", image: "/casa-de-campo/img/atividades/recreacao.png" },
+    { id: 1, title: "PASSEIO A CAVALO", icon: "/casa-de-campo/img/icons/passeio.png", image: "/casa-de-campo/img/atividades/cavalo.png" },
+    { id: 2, title: "FAZENDINHA", icon: "/casa-de-campo/img/icons/fazendinha.png", image: "/casa-de-campo/img/atividades/fazendinha.png" },
+    { id: 3, title: "PISCINAS", icon: "/casa-de-campo/img/icons/piscinas.png", image: "/casa-de-campo/img/atividades/pool.png" },
+    { id: 4, title: "OFURÔS", icon: "/casa-de-campo/img/icons/ofuros.png", image: "/casa-de-campo/img/atividades/ofuro.jpg" },
+    { id: 5, title: "QUADRAS", icon: "/casa-de-campo/img/icons/quadras.png", image: "/casa-de-campo/img/atividades/sport.png" },
+    { id: 6, title: "SINUCA", icon: "/casa-de-campo/img/icons/sinuca.png", image: "/casa-de-campo/img/atividades/sinuca.png" },
+    { id: 7, title: "BOLICHE", icon: "/casa-de-campo/img/icons/boliche.png", image: "/casa-de-campo/img/atividades/boliche.png" },
+    { id: 8, title: "ESPAÇO KIDS", icon: "/casa-de-campo/img/icons/kids.png", image: "/casa-de-campo/img/atividades/kids.png" },
+    { id: 9, title: "CINEMA", icon: "/casa-de-campo/img/icons/cinema.png", image: "/casa-de-campo/img/atividades/cine.png" },
+    { id: 10, title: "PRAIA VILLAGE", icon: "/casa-de-campo/img/icons/praia.png", image: "/casa-de-campo/img/atividades/beach.png" },
+    { id: 11, title: "ADVENTURE", icon: "/casa-de-campo/img/icons/adventure.png", image: "/casa-de-campo/img/atividades/adventure.png" },
+    { id: 12, title: "SPA", icon: "/casa-de-campo/img/icons/spa.png", image: "/casa-de-campo/img/atividades/spa.png" },
+    { id: 13, title: "RESTAURANTES", icon: "/casa-de-campo/img/icons/restaurantes.png", image: "/casa-de-campo/img/atividades/restaurante.png" },
   ];
 
   const handleNext = () => {

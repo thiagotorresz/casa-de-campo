@@ -7,7 +7,7 @@ const chales = [
     description: "Chalé aconchegante com 01 suíte.",
     ambientes: ["Suíte máster: 44,11m²", "WC social: 4,28m²", "Área de serviço: 3,21m²", "Sala: 23,46m²", "Cozinha: 19,76m²", "Piscina: 16,7m²"],
     diferenciais: ["Sauna e piscina privada;", "Lareira interna;", "464m² em área verde;", "Piscina aquecida;", "Praça de fogo com lareira externa;"],
-    images: ["public/img/plantas/foto_suite_2.png", "public/img/plantas/suite_1.png", "public/img/plantas/foto_suite_2.png"],
+    images: ["/casa-de-campo/img/plantas/foto_suite_2.png", "/casa-de-campo/img/plantas/suite_1.png", "/casa-de-campo/img/plantas/foto_suite_2.png"],
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const chales = [
     description: "Chalé espaçoso com 02 suítes.",
     ambientes: ["Suíte máster: 44,11m²", "WC social: 4,28m²", "Área de serviço: 3,21m²", "Sala: 23,46m²", "Cozinha: 19,76m²", "Piscina: 16,7m²"],
     diferenciais: ["Sauna e piscina privada;", "Lareira interna;", "464m² em área verde;", "Piscina aquecida;", "Praça de fogo com lareira externa;"],
-    images: ["public/img/plantas/foto_suite_2.png", "public/img/plantas/suite_2.png", "public/img/plantas/foto_suite_2.png"],
+    images: ["/casa-de-campo/img/plantas/foto_suite_2.png", "/casa-de-campo/img/plantas/suite_2.png", "/casa-de-campo/img/plantas/foto_suite_2.png"],
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const chales = [
     description: "Chalé luxuoso com 03 suítes.",
     ambientes: ["Suíte máster: 45,22m²", "Sala: 21,37m²", "Área de serviço: 4,54m²", "Circulação: 8,35m²", "Cozinha: 19,76m²", "Piscina: 16,7m²", "Suíte 02: 30,84m²", "Suíte 03: 29,40m²", "Lavabo: 3,23m²", "Sauna: 3,35m²"],
     diferenciais: ["Sauna e piscina privada;", "Lareira interna;", "464m² em área verde;", "Piscina aquecida;", "Praça de fogo com lareira externa;"],
-    images: ["public/img/plantas/foto_suite_3.png", "public/img/plantas/suite_3.png", "public/img/plantas/foto_suite_3.png"],
+    images: ["/casa-de-campo/img/plantas/foto_suite_3.png", "/casa-de-campo/img/plantas/suite_3.png", "/casa-de-campo/img/plantas/foto_suite_3.png"],
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const chales = [
     description: "Chalé amplo com 04 suítes.",
     ambientes: ["Suíte máster: 44,11m²", "WC social: 4,28m²", "Área de serviço: 3,21m²", "Sala: 23,46m²", "Cozinha: 19,76m²", "Piscina: 16,7m²"],
     diferenciais: ["Sauna e piscina privada;", "Lareira interna;", "464m² em área verde;", "Piscina aquecida;", "Praça de fogo com lareira externa;"],
-    images: ["public/img/plantas/foto_suite_4.png", "public/img/plantas/suite_4.png", "public/img/plantas/foto_suite_4.png"],
+    images: ["/casa-de-campo/img/plantas/foto_suite_4.png", "/casa-de-campo/img/plantas/suite_4.png", "/casa-de-campo/img/plantas/foto_suite_4.png"],
   },
 ];
 
@@ -77,7 +77,7 @@ const Chales = () => {
 
         <div className="relative hidden sm:block">
           <img
-            src="public/img/chale.jpg"
+            src="/casa-de-campo/img/chale.jpg"
             alt="Chalé"
             className="w-full h-auto"
           />
@@ -194,7 +194,7 @@ const Chales = () => {
 
         <div className="relative block sm:hidden mb-4">
           <img
-            src="public/img/chale-mobile.jpg"
+            src="/casa-de-campo/img/chale-mobile.jpg"
             alt="Chalé"
             className="w-full h-auto"
           />

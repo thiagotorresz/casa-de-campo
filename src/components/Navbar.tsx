@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="lg:w-1/4 flex items-center">
             <a href="#home">
               <img
-                src="public/img/ICON_SITE.png"
+                src="/casa-de-campo/img/ICON_SITE.png"
                 alt="Casa Campo"
                 className="w-12 lg:mt-2 object-contain drop-shadow-md"
               />

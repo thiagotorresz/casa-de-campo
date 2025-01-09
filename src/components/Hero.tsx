@@ -7,42 +7,42 @@ const Hero = () => {
   const slides = [
     {
       type: 'image',
-      src: 'public/img/home/HOME-3.jpg',
+      src: '/casa-de-campo/img/home/HOME-3.jpg',
       alt: 'Home Slider',
     },
     {
       type: 'image',
-      src: 'public/img/home/HOME-2.jpg',
+      src: '/casa-de-campo/img/home/HOME-2.jpg',
       alt: 'Home Slider',
     },
     {
       type: 'image',
-      src: 'public/img/home/HOME.jpg',
+      src: '/casa-de-campo/img/home/HOME.jpg',
       alt: 'Home Slider',
     },
     {
       type: 'image',
-      src: 'public/img/home/HOME-4.jpg',
+      src: '/casa-de-campo/img/home/HOME-4.jpg',
       alt: 'Home Slider',
     },
     {
       type: 'image',
-      src: 'public/img/home/HOME-5.jpg',
+      src: '/casa-de-campo/img/home/HOME-5.jpg',
       alt: 'Home Slider',
     },
     {
       type: 'image',
-      src: 'public/img/home/HOME-6.jpg',
+      src: '/casa-de-campo/img/home/HOME-6.jpg',
       alt: 'Home Slider',
     },
     {
       type: 'image',
-      src: 'public/img/home/HOME-7.jpg',
+      src: '/casa-de-campo/img/home/HOME-7.jpg',
       alt: 'Home Slider',
     },
     {
       type: 'image',
-      src: 'public/img/home/HOME-8.jpg',
+      src: '/casa-de-campo/img/home/HOME-8.jpg',
       alt: 'Home Slider',
     },
     
@@ -88,7 +88,7 @@ const Hero = () => {
           {/* Imagem centralizada e dimensionada */}
           <div className="flex justify-center mb-8">
             <img
-              src="public/img/LOGO_CASADECAMPO.png"
+              src="/casa-de-campo/img/LOGO_CASADECAMPO.png"
               alt="Logo casa de campo"
               className="w-48 md:w-58 lg:w-60"
             />

@@ -14,7 +14,7 @@ const Localização = () => {
           {/* Imagem à direita */}
           <div className="md:w-1/2 flex justify-center">
             <img
-              src="public/img/mapa.jpg" // Substitua pelo caminho da sua imagem
+              src="/casa-de-campo/img/mapa.jpg" // Substitua pelo caminho da sua imagem
               alt="Imagem da localização"
               className="w-full h-auto rounded-lg shadow-md"
             />
@@ -22,7 +22,7 @@ const Localização = () => {
         </div>
         <div className="py-4 justify-center">
             <img
-              src="public/img/plantaalta.jpg" // Substitua pelo caminho da sua imagem
+              src="/casa-de-campo/img/plantaalta.jpg" // Substitua pelo caminho da sua imagem
               alt="Imagem da localização"
               className="w-full h-auto rounded-lg"
             />
