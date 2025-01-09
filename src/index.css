@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg transition-colors;
+  }
+  
+  .btn-primary {
+    @apply bg-emerald-600 text-white hover:bg-emerald-700;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-white text-white hover:bg-white/10;
+  }
+}
+
+@font-face {
+  font-family: 'Adelia';
+  src: url('/fonts/adelia.otf') format('opentype'),
+       url('/fonts/adelia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-01.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-adelia {
+  font-family: 'Adelia', sans-serif;
+}
+
+body {
+  font-size: 19px;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+.text-shandow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nav-color{
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.h-bg{
+  height: 90vh;
+}
+
+.bg-transparentee {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.card {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 58px;
+  height: 58px;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* facebook*/
+.containerTwo:hover {
+  background-color: #1877F2;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #40E15D;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  font-size: 35px;
+  color: white;
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
