@@ -22,7 +22,7 @@ const Services = () => {
       </div>
 
       <div className="h-bg hidden sm:block " style={{ backgroundImage: "url('/casa-de-campo/img/background/services.jpg')", backgroundSize: "cover", backgroundPosition: "right" }}>
-        <div className="max-w-4xl sm:relative sm:top-2/3 sm:left-28 py-2 bg-verde opacity-85 px-4 sm:px-6 lg:px-8 text-white ">
+        <div className="max-w-4xl sm:relative sm:top-1/2 sm:left-[8%] py-8 bg-verde opacity-80 sm:px-2 lg:px-8 text-white ">
           {/* Título central */}
           <div className="">
             <h2 className="text-3xl opacity-100 py-4">

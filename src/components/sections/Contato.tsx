@@ -3,8 +3,8 @@ const Teste = () => {
     <section id="contato" className="py-20 bg-[#cec5b3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center m-auto">
-          <h1 className="font-bold font-adelia text-4xl text-verde">
-            Nossas Redes Sociais
+          <h1 className=" font-adelia text-4xl text-verde">
+            Redes Sociais
           </h1>
           <div className="card">
             <a className="socialContainer containerOne" target="_blank" href="https://www.instagram.com/villageresortmg">

@@ -4,34 +4,38 @@ const chales = [
   {
     id: 1,
     name: "Chalé 01 Suíte",
-    description: "Chalé aconchegante com 01 suíte.",
+    area: "120",
+    description: "Chalé aconchegante com 1 suíte.",
     ambientes: ["Suíte máster: 44,11m²", "WC social: 4,28m²", "Área de serviço: 3,21m²", "Sala: 23,46m²", "Cozinha: 19,76m²", "Piscina: 16,7m²"],
     diferenciais: ["Sauna e piscina privada;", "Lareira interna;", "464m² em área verde;", "Piscina aquecida;", "Praça de fogo com lareira externa;"],
-    images: ["/casa-de-campo/img/plantas/foto_suite_2.png", "/casa-de-campo/img/plantas/suite_1.png", "/casa-de-campo/img/plantas/foto_suite_2.png"],
+    images: ["/casa-de-campo/img/plantas/foto_suite_2.jpg", "/casa-de-campo/img/plantas/plantabaixa1.jpg", "/casa-de-campo/img/plantas/foto_suite_2.jpg"],
   },
   {
     id: 2,
     name: "Chalé 02 Suítes",
-    description: "Chalé espaçoso com 02 suítes.",
+    area: "120",
+    description: "Chalé espaçoso com 2 suítes.",
     ambientes: ["Suíte máster: 44,11m²", "WC social: 4,28m²", "Área de serviço: 3,21m²", "Sala: 23,46m²", "Cozinha: 19,76m²", "Piscina: 16,7m²"],
     diferenciais: ["Sauna e piscina privada;", "Lareira interna;", "464m² em área verde;", "Piscina aquecida;", "Praça de fogo com lareira externa;"],
-    images: ["/casa-de-campo/img/plantas/foto_suite_2.png", "/casa-de-campo/img/plantas/suite_2.png", "/casa-de-campo/img/plantas/foto_suite_2.png"],
+    images: ["/casa-de-campo/img/plantas/foto_suite_2.jpg", "/casa-de-campo/img/plantas/plantabaixa2.jpg", "/casa-de-campo/img/plantas/foto_suite_2.jpg"],
   },
   {
     id: 3,
     name: "Chalé 03 Suítes",
-    description: "Chalé luxuoso com 03 suítes.",
+    area: "120",
+    description: "Chalé luxuoso com 3 suítes.",
     ambientes: ["Suíte máster: 45,22m²", "Sala: 21,37m²", "Área de serviço: 4,54m²", "Circulação: 8,35m²", "Cozinha: 19,76m²", "Piscina: 16,7m²", "Suíte 02: 30,84m²", "Suíte 03: 29,40m²", "Lavabo: 3,23m²", "Sauna: 3,35m²"],
     diferenciais: ["Sauna e piscina privada;", "Lareira interna;", "464m² em área verde;", "Piscina aquecida;", "Praça de fogo com lareira externa;"],
-    images: ["/casa-de-campo/img/plantas/foto_suite_3.png", "/casa-de-campo/img/plantas/suite_3.png", "/casa-de-campo/img/plantas/foto_suite_3.png"],
+    images: ["/casa-de-campo/img/plantas/foto_suite_3.jpg", "/casa-de-campo/img/plantas/plantabaixa3.jpg", "/casa-de-campo/img/plantas/foto_suite_3.jpg"],
   },
   {
     id: 4,
     name: "Chalé 04 Suítes",
-    description: "Chalé amplo com 04 suítes.",
+    area: "120",
+    description: "Chalé amplo com 4 suítes.",
     ambientes: ["Suíte máster: 44,11m²", "WC social: 4,28m²", "Área de serviço: 3,21m²", "Sala: 23,46m²", "Cozinha: 19,76m²", "Piscina: 16,7m²"],
     diferenciais: ["Sauna e piscina privada;", "Lareira interna;", "464m² em área verde;", "Piscina aquecida;", "Praça de fogo com lareira externa;"],
-    images: ["/casa-de-campo/img/plantas/foto_suite_4.png", "/casa-de-campo/img/plantas/suite_4.png", "/casa-de-campo/img/plantas/foto_suite_4.png"],
+    images: ["/casa-de-campo/img/plantas/foto_suite_4.jpg", "/casa-de-campo/img/plantas/plantabaixa4.jpg", "/casa-de-campo/img/plantas/foto_suite_4.jpg"],
   },
 ];
 
@@ -69,8 +73,8 @@ const Chales = () => {
     <section id="chales" className="py-20 bg-verde text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-adelia text-dourado">Tipos de Chalés</h2>
-          <p className="mt-4 text-gray-300">
+          <h2 className="text-4xl font-adelia text-dourado">Tipos de Chalés</h2>
+          <p className="mt-4 text-gray-300 text-base">
             Clique nos chalés para ver mais detalhes e fotos.
           </p>
         </div>
@@ -318,11 +322,11 @@ const Chales = () => {
                 setSelectedChale(chale);
                 setCurrentImageIndex(0); // Reseta o índice da imagem ao abrir o modal
               }}
-              className="relative bg-green-600 hover:bg-green-500 rounded-lg shadow-lg p-4 text-center transition"
+              className="relative bg-[#0f2112] hover:bg-green-600 rounded-lg shadow-lg p-6 text-center transition"
             >
               <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-10 hover:opacity-20 rounded-lg"></div>
-              <h3 className="text-lg font-bold mb-2">{chale.name}</h3>
-              <p className="text-sm">{chale.description}</p>
+              <h3 className="text-lg font-bold uppercase mb-2">{chale.name}</h3>
+              {/* <p className="text-sm">{chale.description}</p> */}
             </button>
           ))}
         </div>
@@ -369,15 +373,17 @@ const Chales = () => {
           <div className="flex flex-col md:flex-row w-full h-full">
             {/* Informações de ambientes e diferenciais à esquerda */}
             <div className="w-full md:w-1/2 bg-green-900 text-white p-8 flex flex-col justify-center">
-              <h4 className="text-3xl font-bold mb-4">Ambientes:</h4>
-              <ul className="list-disc list-inside text-lg">
+              <h4 className="text-3xl font-bold italic">{selectedChale.name}</h4>
+              <h4 className="text-3xl font-bold mb-4 italic">{selectedChale.area} m² construídos</h4>
+              <h4 className="text-lg font-bold">Ambientes:</h4>
+              <ul className="list-disc list-inside text-base">
                 {selectedChale.ambientes.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
 
-              <h4 className="text-3xl font-bold mt-6 mb-4">Diferenciais:</h4>
-              <ul className="list-disc list-inside text-lg">
+              <h4 className="text-lg font-bold mt-6 ">Diferenciais:</h4>
+              <ul className="list-disc list-inside text-base">
                 {selectedChale.diferenciais.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
@@ -389,7 +395,7 @@ const Chales = () => {
               <img
                 src={selectedChale.images[1]}
                 alt={`Imagem do ${selectedChale.name}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>

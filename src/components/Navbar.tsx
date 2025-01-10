@@ -8,17 +8,17 @@ const Navbar = () => {
 
   const navbarClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrollPosition > 800
     ? 'nav-color backdrop-blur-sm shadow-sm'
-    : 'bg-transparent'
+    : 'nav-color'
     }`;
 
   const linkClasses = `transition-colors ${scrollPosition > 800
     ? 'text-white font-semibold hover:text-green-600'
-    : 'text-dourado font-semibold text-shandow hover:text-verde'
+    : 'text-white font-semibold text-shandow hover:text-verde'
     }`;
 
   const buttonClasses = `transition-all ${scrollPosition > 800
     ? 'font-bold text-white font-semibold hover:text-green-600'
-    : 'text-dourado font-semibold text-shandow hover:text-verde'
+    : 'text-white font-semibold text-shandow hover:text-verde'
     }`;
 
   const whatsappMessage = encodeURIComponent(
@@ -27,50 +27,49 @@ const Navbar = () => {
 
   return (
     <nav className={navbarClasses}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex items-center justify-between h-16">
+        {/* Left Section: Logo and Links */}
+        <div className="flex items-center space-x-8">
           {/* Logo */}
-          <div className="lg:w-1/4 flex items-center">
-            <a href="#home">
-              <img
-                src="/casa-de-campo/img/ICON_SITE.png"
-                alt="Casa Campo"
-                className="w-12 lg:mt-2 object-contain drop-shadow-md"
-              />
-            </a>
-          </div>
-
-          {/* Desktop Menu */}
+          <a href="#home">
+            <img
+              src="/casa-de-campo/img/ICON_SITE.png"
+              alt="Casa Campo"
+              className="w-12 lg:mt-2 object-contain drop-shadow-md"
+            />
+          </a>
+          {/* Links */}
           <div className="hidden md:flex items-center space-x-8 text-nowrap" style={{ fontSize: '13px', letterSpacing: '2.5px' }}>
-            <a href="#services" className={linkClasses} >A ASSINATURA</a>
+            <a href="#services" className={linkClasses}>A ASSINATURA</a>
             <a href="#comparativo" className={linkClasses}>BENEFÍCIOS</a>
             <a href="#chales" className={linkClasses}>AS CASAS</a>
             <a href="#sobre" className={linkClasses}>O RESORT</a>
             <a href="#localizacao" className={linkClasses}>LOCALIZAÇÃO</a>
             <a href="#contato" className={linkClasses}>CONTATOS</a>
+          </div>
+        </div>
 
-            <a
-              href={`https://wa.me/5591999999999?text=${whatsappMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            style={{ marginRight: '-25px' }}>
-              <button className={`rounded-lg flex items-center ${buttonClasses}`}>
-                {/* Ícone do WhatsApp */}
-                  <i className="fa-brands fa-whatsapp text-3xl"></i>
-                {/* Texto */}
-              </button>
-            </a>
-
-            <a
-              href="https://www.instagram.com/villageresortmg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className={`rounded-lg flex items-center ${buttonClasses}`}>
-                {/* Ícone do Instagram */}
-                  <i className="fa-brands fa-instagram text-3xl"></i>
-              </button>
-            </a>
+        {/* Right Section: Social Icons */}
+        <div className="hidden md:flex items-center space-x-4">
+          <a
+            href={`https://wa.me/5591999999999?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className={`rounded-lg flex items-center ${buttonClasses}`}>
+              <i className="fa-brands fa-whatsapp text-3xl"></i>
+            </button>
+          </a>
+          <a
+            href="https://www.instagram.com/villageresortmg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className={`rounded-lg flex items-center ${buttonClasses}`}>
+              <i className="fa-brands fa-instagram text-3xl"></i>
+            </button>
+          </a>
 
           </div>
 

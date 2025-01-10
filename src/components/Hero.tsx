@@ -100,6 +100,12 @@ const Hero = () => {
               Você a uma assinatura do paraíso!
             </h1>
           </div>
+
+          <a href="#form">
+            <div className="flex justify-center">
+              <img src="/casa-de-campo/img/home/receba.png" alt="Saiba mais" className="w-8/12 md:w-6/12 lg:w-8/12" />
+            </div>
+          </a>
         </div>
       </div>
     </div>

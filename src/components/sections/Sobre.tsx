@@ -1,12 +1,11 @@
 const Sobre = () => {
   return (
-    <section id="sobre" className="py-16 bg-verde">
+    <section id="sobre" className="py-8 bg-verde">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Título e descrição */}
         <div className="text-center mb-12">
-          <h2 className="text-sm uppercase text-dourado tracking-wide">o Resort</h2>
-          <h1 className="text-4xl font-bold font-adelia text-dourado">Village Resort</h1>
+          <h1 className="text-4xl font-adelia text-dourado">Village Resort</h1>
         </div>
 
         {/* Texto sobre o local */}

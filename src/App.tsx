@@ -5,6 +5,7 @@ import Services from './components/sections/Services';
 import Comparativo from './components/sections/Comparativo';
 import Lazer from './components/sections/Lazer';
 import Localizacao from './components/sections/Localizacao';
+import Form from './components/sections/Form';
 import Chale from './components/sections/Chale';
 import Contato from './components/sections/Contato';
 import Footer from './components/sections/Footer';
@@ -22,6 +23,7 @@ function App() {
       <Sobre />
       <Lazer />
       <Localizacao />
+      <Form />
       <Contato />
       <Footer />
     </div>

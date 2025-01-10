@@ -1,10 +1,10 @@
 const Comparativo = () => {
   return (
-    <section id="comparativo" className="pt-20 bg-gradient-to-b from-green-200 to-verde">
+    <section id="comparativo" className="pt-20 bg-verde">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800">
+          <h2 className="text-3xl sm:text-4xl font-bold text-dourado">
             Afinal, vale mais a pena{" "}
             <span className="font-adelia text-dourado">Comprar ou Assinar?</span>
           </h2>
@@ -52,36 +52,40 @@ const Comparativo = () => {
         </div>
       </div>
 
-      {/* Benefícios com imagem ao lado */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mt-8 bg-white shadow-lg rounded-lg relative overflow-hidden montserrat">
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-              {/* Texto */}
-              <div className="p-8 z-10">
-                <h2 className="text-lg font-bold text-green-700 mb-4 text-center " style={{ fontSize: "24px" }}>
-                  Quais são os benefícios da Casa de Campo por assinatura?
-                </h2>
-                <ul className="list-none pl-5 text-black space-y-2 font-bold montserrat" style={{ fontSize: "21px" }}>
-                  <li> <i className="bi bi-arrow-right-circle-fill text-green-700"></i> Sem burocracia na contratação;</li>
-                  <li> <i className="bi bi-arrow-right-circle-fill text-green-700"></i> Possibilidade de lazer imediato;</li>
-                  <li> <i className="bi bi-arrow-right-circle-fill text-green-700"></i> Menos despesas;</li>
-                  <li> <i className="bi bi-arrow-right-circle-fill text-green-700"></i> Possibilidade de trocar de casa;</li>
-                  <li> <i className="bi bi-arrow-right-circle-fill text-green-700"></i> Acesso aos espaços e serviços do resort.</li>
-                </ul>
-              </div>
-              {/* Imagem */}
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1509600110300-21b9d5fedeb7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Substitua pelo caminho real da imagem
-                  alt="Casa de Campo"
-                  className="h-full w-full object-cover"
-                />
-                {/* Efeito de sobreposição */}
-                <div className="absolute inset-0 bg-white/30 mix-blend-multiply"></div>
-              </div>
-            </div>
+      {/* Benefícios com texto centralizado */}
+      <div
+        className="h-bg text-verde py-16 bg-white flex items-center"
+        style={{
+          backgroundImage: "url('/casa-de-campo/img/background/beneficios.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "right",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center ml-[10%]">
+          <div className="text-center lg:text-left bg-opacity-70 p-8">
+            <h2 className="text-4xl leading-tight mb-14">
+              Quais são os benefícios <br />
+              da Casa de Campo <br />
+              <span className="font-adelia ml-16 text-5xl">por assinatura?</span>
+            </h2>
+            <p className="font-black italic text-xl mb-4">
+              SERVIÇOS DE HOTEL NO CONFORTO <br />
+              E EXCLUSIVIDADE DA SUA CASA
+            </p>
+            <ul className="list-none italic space-y-3 text-lg uppercase" style={{ fontWeight: "bolder" }}>
+              <li>▸ Sem burocracia na contratação;</li>
+              <li>▸ Possibilidade de lazer imediato;</li>
+              <li>▸ Menos despesas;</li>
+              <li>▸ Possibilidade de trocar de casa;</li>
+              <li>▸ Acesso aos espaços e serviços do resort.</li>
+            </ul>
           </div>
         </div>
+      </div>
+
+
+
     </section>
   );
 };
