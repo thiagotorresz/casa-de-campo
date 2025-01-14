@@ -1,6 +1,6 @@
 const Comparativo = () => {
   return (
-    <section id="comparativo" className="pt-12 md:pt-20 bg-verde">
+    <section id="comparativo" className="pt-16 md:pt-20 bg-verde">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <div className="text-center mb-12">

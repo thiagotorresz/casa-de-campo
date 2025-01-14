@@ -70,7 +70,7 @@ const Chales = () => {
   };
 
   return (
-    <section id="chales" className="py-20 bg-verde text-white">
+    <section id="chales" className="py-8 pt-24 bg-verde text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className=" text-4xl md:text-6xl font-adelia text-dourado">Tipos de Chalés</h2>

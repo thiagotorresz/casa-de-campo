@@ -87,30 +87,31 @@ const Lazer = () => {
 
 
         {/* Slider */}
-        <div
-          className="relative bg-white rounded-lg shadow-lg overflow-hidden"
-          id="slideratividades"
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          <img
-            src={options[activeOption].image}
-            alt={options[activeOption].title}
-            className="w-full h-full object-cover"
-          />
-          <button
-            onClick={handlePrevious}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-shadow hover:text-dourado transition-all"
+        <div className="pt-14" id="slideratividades">
+          <div
+            className="relative bg-white rounded-lg shadow-lg overflow-hidden"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
-            <i className="fa-solid fa-angle-left text-5xl"></i>
-          </button>
-          <button
-            onClick={handleNext}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-shadow hover:text-dourado transition-all"
-          >
-            <i className="fa-solid fa-angle-right text-5xl"></i>
-          </button>
+            <img
+              src={options[activeOption].image}
+              alt={options[activeOption].title}
+              className="w-full h-full object-cover"
+            />
+            <button
+              onClick={handlePrevious}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-shadow hover:text-dourado transition-all"
+            >
+              <i className="fa-solid fa-angle-left text-5xl"></i>
+            </button>
+            <button
+              onClick={handleNext}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-shadow hover:text-dourado transition-all"
+            >
+              <i className="fa-solid fa-angle-right text-5xl"></i>
+            </button>
+          </div>
         </div>
 
       </div>

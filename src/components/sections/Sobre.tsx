@@ -1,6 +1,6 @@
 const Sobre = () => {
   return (
-    <section id="sobre" className="py-8 bg-verde">
+    <section id="sobre" className="py-8 pt-24 bg-verde">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Título e descrição */}
