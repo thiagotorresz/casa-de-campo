@@ -2,9 +2,9 @@ const Services = () => {
   return (
     <section id="services" className="relative pt-6 bg-verde" >
       {/* A Casa dos sonhos */}
-      <div className="bg-verde py-10 pb-16">
+      <div className="bg-verde py-8 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-dourado mb-6 text-4xl tracking-wide">
+          <h1 className="text-dourado mb-6 text-2xl md:text-4xl tracking-wide">
             A Casa de Campo dos sonhos <br />
             <span className="font-adelia">sem custos adicionais</span>
           </h1>
@@ -46,7 +46,7 @@ const Services = () => {
       {/* MOBILE */}
 
       <div className="h-bg bg-verde md:hidden" style={{ backgroundImage: "url('/casa-de-campo/img/background/services.jpg')", backgroundSize: "cover", backgroundPosition: "right" }}>
-        <div className="max-w-4xl relative top-[60%] py-4 px-2 bg-verde opacity-80 text-white ">
+        <div className="max-w-4xl relative top-[55%] py-4 px-2 bg-verde opacity-80 text-white ">
           {/* Título central */}
           <div className="">
             <h2 className="text-2xl opacity-100">

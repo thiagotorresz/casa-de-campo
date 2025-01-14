@@ -34,32 +34,13 @@ const Sobre = () => {
           </div>
         </div>
       </div>
-      {/* MOBILE */}
-      <div className="bg-verde py-10 block md:hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-dourado mb-6 text-3xl tracking-wide">
-            A sua Casa de Campo  <br />
-            <span className="font-adelia">dentro de um Resort</span>
-          </h1>
-          <p className="text-gray-200 indent-7 montserrat max-w-3xl mx-auto leading-relaxed text-left">
-            Tenha todo o aconchego e privacidade de uma casa de campo, com o requinte e lazer completo
-            de um resort. O <span className="font-bold">Village Resort</span> é o mais novo quintal dos seus sonhos, é a garantia de uma vida de
-            diversão e conforto, sem preocupações. Compartilhe momentos inesquecíveis em família com a
-            certeza de um mundo de possibilidades que se abre para você.
-          </p>
-          <p className="text-gray-200 indent-7 montserrat max-w-3xl mx-auto leading-relaxed text-left">
-            Muito mais do que um sítio ou chalé, a Casa de Campo é o seu refúgio na natureza com a comodidade e luxo que só
-            um resort pode proporcionar.
-          </p>
-        </div>
-      </div>
 
       {/* DESKTOP */}
       <div>
         <img src="/casa-de-campo/img/background/resort.jpg" alt="" className="hidden md:block w-full h-auto" />
       </div>
 
-      {/* Mobile */}
+      {/* MOBILE */}
       <div className="md:hidden w-full h-[445px] overflow-hidden">
         <img
           src="/casa-de-campo/img/background/resort-mb.jpg"

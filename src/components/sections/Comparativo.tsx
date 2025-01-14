@@ -4,7 +4,7 @@ const Comparativo = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl text-dourado">
+          <h2 className="text-2xl md:text-4xl text-dourado">
             Afinal, vale mais a pena{" "}
             <span className="font-adelia text-dourado">Comprar ou Assinar?</span>
           </h2>
