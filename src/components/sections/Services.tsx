@@ -21,7 +21,9 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="h-bg hidden sm:block bg-verde" style={{ backgroundImage: "url('/casa-de-campo/img/background/services.jpg')", backgroundSize: "cover", backgroundPosition: "right" }}>
+      {/* DEKTOP */}
+
+      <div className="h-bg hidden md:block bg-verde" style={{ backgroundImage: "url('/casa-de-campo/img/background/services.jpg')", backgroundSize: "cover", backgroundPosition: "right" }}>
         <div className="max-w-4xl sm:relative sm:top-1/2 sm:left-[8%] py-8 bg-verde opacity-80 sm:px-2 lg:px-8 text-white ">
           {/* Título central */}
           <div className="">
@@ -40,6 +42,29 @@ const Services = () => {
           </div>
         </div>
       </div>
+
+      {/* MOBILE */}
+
+      <div className="h-bg bg-verde md:hidden" style={{ backgroundImage: "url('/casa-de-campo/img/background/services.jpg')", backgroundSize: "cover", backgroundPosition: "right" }}>
+        <div className="max-w-4xl relative top-[60%] py-4 px-2 bg-verde opacity-80 text-white ">
+          {/* Título central */}
+          <div className="">
+            <h2 className="text-2xl opacity-100">
+              Como funciona o <br /> <span className="font-adelia ml-12">serviço de assinatura?</span>
+            </h2>
+          </div>
+          <div className="text-base">
+            <p className="indent-2 opacity-100">
+              A utilização é pré-estabelecida em contrato que assegura o uso do imóvel por 5 ou 10 anos, com cotas de utilização para 3, 5 e 7 dias mensais.
+            </p>
+            <p className="indent-2 opacity-100">
+              A mesma casa poderá ser assinada por diferentes pessoas, que estarão aptas a usufruí-la, de forma individual ou em grupos de amigos e família, em períodos
+              agendados conforme estilo de vida e rotina.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 };

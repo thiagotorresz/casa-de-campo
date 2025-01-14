@@ -3,6 +3,36 @@ import { useState } from "react";
 const Lazer = () => {
   const [activeOption, setActiveOption] = useState(0);
 
+  // Variáveis para rastrear o movimento
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const touchDifference = touchStartX - touchEndX;
+
+    // Determinar a direção do arraste
+    if (touchDifference > 50) {
+      // Arraste para a esquerda
+      handleNext();
+    } else if (touchDifference < -50) {
+      // Arraste para a direita
+      handlePrevious();
+    }
+
+    // Resetar valores
+    touchStartX = 0;
+    touchEndX = 0;
+  };
+
+
   const options = [
     { id: 0, title: "RECREAÇÃO", icon: "/casa-de-campo/img/icons/recreacao.png", image: "/casa-de-campo/img/atividades/recreacao.jpg" },
     { id: 1, title: "PASSEIO A CAVALO", icon: "/casa-de-campo/img/icons/passeio.png", image: "/casa-de-campo/img/atividades/cavalo.jpg" },
@@ -31,32 +61,39 @@ const Lazer = () => {
   return (
     <section id="lazer" className="bg-gradient-to-b from-verde to-[#cec5b3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Círculos */}
         <a href="#slideratividades">
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
             {options.map((option) => (
               <button
                 key={option.id}
                 onClick={() => setActiveOption(option.id)}
-                className={`w-36 h-36 flex flex-col items-center justify-center border-2 border-dourado text-white hover:bg-dourado hover:text-verde transition-all duration-300 ${
-                  activeOption === option.id ? "bg-dourado text-verde" : ""
-                }`}
+                className={`w-20 h-20 md:w-36 md:h-36 flex flex-col items-center justify-center text-white transition-all duration-300 transform ${activeOption === option.id
+                  ? "bg-dourado text-verde scale-125" // Efeito fixo ao clicar
+                  : "hover:scale-125 hover:bg-dourado hover:text-verde"
+                  }`}
               >
                 <div className="flex flex-col items-center">
                   {/* Ícone como imagem */}
                   <img
                     src={option.icon}
-                    className="w-14 h-12 object-contain mb-2"
+                    className="w-10 h-10 md:w-14 md:h-12 object-contain md:mb-2"
                   />
-                  <span className="text-sm font-semibold">{option.title}</span>
+                  <span className="text-xs md:text-sm font-semibold">{option.title}</span>
                 </div>
               </button>
             ))}
           </div>
         </a>
 
+
         {/* Slider */}
-        <div className="relative bg-white rounded-lg shadow-lg overflow-hidden" id="slideratividades">
+        <div
+          className="relative bg-white rounded-lg shadow-lg overflow-hidden"
+          id="slideratividades"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <img
             src={options[activeOption].image}
             alt={options[activeOption].title}
@@ -64,17 +101,18 @@ const Lazer = () => {
           />
           <button
             onClick={handlePrevious}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado transition-all"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-shadow hover:text-dourado transition-all"
           >
             <i className="fa-solid fa-angle-left text-5xl"></i>
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado transition-all"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-shadow hover:text-dourado transition-all"
           >
             <i className="fa-solid fa-angle-right text-5xl"></i>
           </button>
         </div>
+
       </div>
     </section>
   );

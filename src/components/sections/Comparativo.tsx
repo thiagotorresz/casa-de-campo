@@ -1,6 +1,6 @@
 const Comparativo = () => {
   return (
-    <section id="comparativo" className="pt-20 bg-verde">
+    <section id="comparativo" className="pt-12 md:pt-20 bg-verde">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Título */}
         <div className="text-center mb-12">
@@ -65,7 +65,7 @@ const Comparativo = () => {
         <div className="max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center lg:flex-row lg:items-start ml-[10%]">
           {/* Texto */}
           <div className="text-center lg:text-left bg-opacity-70 p-8 order-2 lg:order-1">
-            <h2 className="text-4xl leading-tight mb-14 max-w-lg">
+            <h2 className=" text-xl md:text-4xl leading-tight mb-14 max-w-lg">
               Quais são os benefícios
               da Casa de Campo <br />
               <span className="font-adelia ml-16 text-5xl">por assinatura?</span>
@@ -75,9 +75,7 @@ const Comparativo = () => {
               E EXCLUSIVIDADE DA SUA CASA
             </p>
             <ul
-              className="list-none italic space-y-3 text-lg uppercase"
-              style={{ fontWeight: "bolder" }}
-            >
+              className="list-none italic space-y-3 text-lg uppercase">
               <li>▸ Sem burocracia na contratação;</li>
               <li>▸ Possibilidade de lazer imediato;</li>
               <li>▸ Menos despesas;</li>
@@ -94,19 +92,17 @@ const Comparativo = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
           {/* Texto */}
           <div className="text-left bg-opacity-70 p-8 order-2 lg:order-1">
-            <h2 className="text-4xl leading-tight text-dourado mb-14 max-w-lg">
+            <h2 className="text-2xl leading-tight text-dourado mb-8 max-w-lg">
               Quais são os benefícios
               da Casa de Campo <br />
-              <span className="font-adelia ml-16 text-5xl">por assinatura?</span>
+              <span className="font-adelia ml-16 text-3xl">por assinatura?</span>
             </h2>
-            <p className="font-black italic text-white text-xl mb-4">
+            <p className="font-black italic text-white text-lg mb-4">
               SERVIÇOS DE HOTEL NO CONFORTO <br />
               E EXCLUSIVIDADE DA SUA CASA
             </p>
             <ul
-              className="list-none italic space-y-3 text-lg text-white uppercase"
-              style={{ fontWeight: "bolder" }}
-            >
+              className="list-none italic space-y-3 text-base text-white uppercase">
               <li>▸ Sem burocracia na contratação;</li>
               <li>▸ Possibilidade de lazer imediato;</li>
               <li>▸ Menos despesas;</li>

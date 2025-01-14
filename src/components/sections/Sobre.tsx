@@ -5,7 +5,7 @@ const Sobre = () => {
 
         {/* Título e descrição */}
         <div className="text-center mb-12">
-          <h1 className="text-6xl font-adelia text-dourado">Village Resort</h1>
+          <h1 className=" text-4xl md:text-6xl font-adelia text-dourado">Village Resort</h1>
         </div>
 
         {/* Texto sobre o local */}
@@ -56,8 +56,18 @@ const Sobre = () => {
 
       {/* DESKTOP */}
       <div>
-        <img src="/casa-de-campo/img/background/resort.jpg" alt="" className="hidden md:block w-full h-auto"/>
+        <img src="/casa-de-campo/img/background/resort.jpg" alt="" className="hidden md:block w-full h-auto" />
       </div>
+
+      {/* Mobile */}
+      <div className="md:hidden w-full h-[445px] overflow-hidden">
+        <img
+          src="/casa-de-campo/img/background/resort-mb.jpg"
+          alt="Mapa do Resort"
+          className="w-full h-full object-cover object-left"
+        />
+      </div>
+
     </section>
 
   );

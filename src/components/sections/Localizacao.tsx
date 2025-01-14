@@ -5,7 +5,7 @@ const Localização = () => {
         <div className="flex flex-col relative md:flex-row items-center gap-8">
           {/* Texto à esquerda */}
           <div className="md:w-1/4 text-verde text-center md:text-left flex flex-col justify-center">
-            <h2 className="text-6xl font-adelia mb-8">Localização</h2>
+            <h2 className=" text-4xl md:text-6xl font-adelia mb-8">Localização</h2>
             <p className="text-base leading-relaxed indent-5">
               As Casas de Campo estão localizadas dentro do <span className="font-bold">Village Resort</span>, na cidade de Jaboticatubas, a aproximadamente 52 km de Belo Horizonte, a 42 km do Aeroporto de Confins e a 29 km da Pista de Paraquedismo da Serra do Cipó, em uma área de preservação dentro do Parque Nacional da Serra do Cipó com acesso por vias asfaltadas.
             </p>
@@ -28,7 +28,7 @@ const Localização = () => {
             />
           </div>
         </div>
-        <div className="py-4 justify-center">
+        <div className="py-4 justify-center mt-[-2%]">
           <img
             src="/casa-de-campo/img/plantaalta.jpg"
             alt="Imagem da localização"

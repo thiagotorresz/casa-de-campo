@@ -40,7 +40,8 @@ const Form = () => {
 
   return (
     <div className="bg-dourado p-8 shadow-lg text-verde" id="form">
-      <h3 className="text-2xl font-bold mb-2 text-center">RECEBA MAIS INFORMAÇÕES</h3>
+     <h3 className="text-xl md:text-3xl font-black mb-2 text-center">RECEBA MAIS INFORMAÇÕES</h3>
+
 
       {/* Exibe a mensagem de sucesso se o cadastro for bem-sucedido */}
       {sucesso && (
