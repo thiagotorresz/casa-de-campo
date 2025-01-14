@@ -1,112 +1,117 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import { db, getNextId } from '../../config/firebaseConfig'; // Importando a função getNextId
+import { doc, setDoc } from 'firebase/firestore'; // Adicionando setDoc para salvar documentos com ID personalizado
 
 const Form = () => {
-  
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
-  });
+  // Estados para armazenar os valores dos inputs
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [telefone, setPhone] = useState('');
+  const [sucesso, setSucesso] = useState(false); // Estado para controlar a mensagem de sucesso
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  // Função de submit do formulário
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    // Objeto com os dados para envio
+    const newUser = {
+      name: nome,
+      email: email,
+      phone: telefone,
+    };
 
     try {
-      // Substitua pelo URL do seu Apps Script
-      const scriptURL = "https://script.google.com/macros/s/AKfycbzZg61y5Px7UcLKxjNkswcd_zVpdzkknu_fQbO8iQ1G8NJqsbNkzapMRIqCg0fQNJZD/exec";
+      // Obtendo o próximo ID sequencial
+      const newId = await getNextId();
 
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      // Usando o ID sequencial para adicionar o documento
+      await setDoc(doc(db, 'users', newId.toString()), newUser); // Usando o novo ID como chave
 
-      const result = await response.json();
-      if (result.status === "success") {
-        alert("Dados enviados com sucesso!");
-        setFormData({ nome: "", email: "", telefone: "" }); // Limpa o formulário
-      } else {
-        alert("Erro ao enviar os dados.");
-      }
+      console.log('Usuário cadastrado com sucesso!');
+      setSucesso(true); // Atualiza o estado de sucesso para exibir a mensagem
+      setNome('');
+      setEmail('');
+      setPhone('');
     } catch (error) {
-      console.error("Erro:", error);
-      alert("Erro ao enviar os dados.");
+      console.error('Erro ao cadastrar usuário:', error);
+      setSucesso(false); // Se houver erro, não exibe a mensagem de sucesso
     }
   };
 
   return (
-    <section id="form" className="py-8 bg-[#cec5b3] flex justify-center">
-      <div className="w-[90%] max-w-md bg-[#154734] text-white p-6 rounded-lg shadow-lg">
-        <h1 className="text-center font-bold text-xl uppercase mb-4 text-[#d1af5c]">
-          Receba Mais Informações
-        </h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <input
-              type="text"
-              name="nome"
-              value={formData.nome}
-              onChange={handleInputChange}
-              placeholder="Nome:"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900 focus:ring-[#d1af5c] focus:border-[#d1af5c]"
-              required
-            />
-          </div>
-          <div>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              placeholder="E-mail:"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900 focus:ring-[#d1af5c] focus:border-[#d1af5c]"
-              required
-            />
-          </div>
-          <div>
-            <input
-              type="tel"
-              name="telefone"
-              value={formData.telefone}
-              onChange={handleInputChange}
-              placeholder="Telefone:"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900 focus:ring-[#d1af5c] focus:border-[#d1af5c]"
-              required
-            />
-          </div>
-          <div>
-            <button
-              type="submit"
-              className="w-full bg-[#d1af5c] text-[#154734] font-bold py-3 rounded-md uppercase hover:bg-[#c19e53]"
-            >
-              Quero Saber Mais
-            </button>
-          </div>
-          <div className="text-sm text-gray-300 flex items-start space-x-2">
-            <input
-              type="checkbox"
-              name="lgpd"
-              id="lgpd"
-              className="mt-1 h-4 w-4 border-gray-300 rounded text-[#d1af5c] focus:ring-[#d1af5c]"
-              required
-            />
-            <label htmlFor="lgpd" className="leading-snug">
-              De acordo com a Lei Geral de Proteção de Dados, concordo em fornecer os
-              dados acima para que o incorporador entre em contato comigo para
-              apresentar produtos e serviços de acordo com a Política de Privacidade
-              adotada.
-            </label>
-          </div>
-        </form>
-      </div>
-    </section>
+    <div className="bg-dourado p-8 shadow-lg text-verde" id="form">
+      <h3 className="text-2xl font-bold mb-2 text-center">RECEBA MAIS INFORMAÇÕES</h3>
+
+      {/* Exibe a mensagem de sucesso se o cadastro for bem-sucedido */}
+      {sucesso && (
+        <div className="text-dourado text-center bg-verde p-4 rounded mb-4">
+          Cadastro realizado com sucesso! Agradecemos pelo seu interesse.
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit}>
+        {/* Campo Nome */}
+        <div className="mb-4">
+          <input
+            type="text"
+            value={nome}
+            onChange={(event) => setNome(event.target.value)}
+            className="w-full p-2 border border-gray-300"
+            required
+            placeholder="Nome:"
+          />
+        </div>
+
+        {/* Campo Email */}
+        <div className="mb-4">
+          <input
+            type="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            className="w-full p-2 border border-gray-300"
+            required
+            placeholder="E-mail:"
+          />
+        </div>
+
+        {/* Campo Telefone */}
+        <div className="mb-4">
+          <input
+            type="text"
+            value={telefone}
+            onChange={(event) => setPhone(event.target.value)}
+            className="w-full p-2 border border-gray-300"
+            required
+            placeholder="Telefone"
+          />
+        </div>
+
+        {/* Botão de Enviar */}
+        <button
+          type="submit"
+          className="w-full bg-verde text-white py-2 font-bold hover:bg-green-800 transition"
+        >
+          QUERO SABER MAIS
+        </button>
+
+        {/* Termos de Consentimento */}
+        <div className="text-sm text-verde flex items-start space-x-2 mt-4">
+          <input
+            type="checkbox"
+            name="terms"
+            id="terms"
+            className="mt-1 h-4 w-4 border-gray-300 rounded text-[#d1af5c] focus:ring-[#d1af5c]"
+            required
+          />
+          <label htmlFor="terms" className="leading-snug text-xs">
+            De acordo com a Lei Geral de Proteção de Dados, concordo em fornecer os
+            dados acima para que o incorporador entre em contato comigo para
+            apresentar produtos e serviços de acordo com a Política de Privacidade
+            adotada.
+          </label>
+        </div>
+      </form>
+    </div>
   );
 };
 

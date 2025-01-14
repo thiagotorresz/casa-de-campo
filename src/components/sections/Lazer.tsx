@@ -64,15 +64,15 @@ const Lazer = () => {
           />
           <button
             onClick={handlePrevious}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-yellow-500 p-3 rounded-full shadow-md hover:bg-yellow-600 transition-all"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado transition-all"
           >
-            &#8249;
+            <i className="fa-solid fa-angle-left text-5xl"></i>
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-yellow-500 p-3 rounded-full shadow-md hover:bg-yellow-600 transition-all"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado transition-all"
           >
-            &#8250;
+            <i className="fa-solid fa-angle-right text-5xl"></i>
           </button>
         </div>
       </div>

@@ -77,7 +77,7 @@ const Hero = () => {
                 loop
               />
             )}
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/20" />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -86,11 +86,11 @@ const Hero = () => {
       <div className="absolute inset-0 flex items-center justify-center z-10" id="home">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 text-center">
           {/* Imagem centralizada e dimensionada */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-8 drop-shadow-2xl md:mt-64">
             <img
               src="/casa-de-campo/img/LOGO_CASADECAMPO.png"
               alt="Logo casa de campo"
-              className="w-48 md:w-58 lg:w-60"
+              className="w-48 md:w-58 lg:w-64 drop-shadow-2xl"
             />
           </div>
 

@@ -73,8 +73,8 @@ const Chales = () => {
     <section id="chales" className="py-20 bg-verde text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-adelia text-dourado">Tipos de Chalés</h2>
-          <p className="mt-4 text-gray-300 text-base">
+          <h2 className="text-6xl font-adelia text-dourado">Tipos de Chalés</h2>
+          <p className="mt-6 text-gray-300 text-base">
             Clique nos chalés para ver mais detalhes e fotos.
           </p>
         </div>
@@ -372,7 +372,7 @@ const Chales = () => {
         {currentImageIndex === 1 && (
           <div className="flex flex-col md:flex-row w-full h-full">
             {/* Informações de ambientes e diferenciais à esquerda */}
-            <div className="w-full md:w-1/2 bg-green-900 text-white p-8 flex flex-col justify-center">
+            <div className="w-full md:w-1/3 bg-verde text-white p-8 flex flex-col justify-center">
               <h4 className="text-3xl font-bold italic">{selectedChale.name}</h4>
               <h4 className="text-3xl font-bold mb-4 italic">{selectedChale.area} m² construídos</h4>
               <h4 className="text-lg font-bold">Ambientes:</h4>
@@ -391,7 +391,7 @@ const Chales = () => {
             </div>
 
             {/* Segunda imagem à direita */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-2/3 bg-verde">
               <img
                 src={selectedChale.images[1]}
                 alt={`Imagem do ${selectedChale.name}`}
@@ -415,15 +415,15 @@ const Chales = () => {
         {/* Botões de navegação */}
         <button
           onClick={handlePrevImage}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl bg-black bg-opacity-10 text-white font-bold px-4 py-2 rounded-full hover:bg-opacity-80"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado"
         >
-          <i className="fa-solid fa-caret-left"></i>
+          <i className="fa-solid fa-angle-left text-5xl"></i>
         </button>
         <button
           onClick={handleNextImage}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-3xl bg-black bg-opacity-10 text-white font-bold px-4 py-2 rounded-full hover:bg-opacity-80"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado"
         >
-          <i className="fa-solid fa-caret-right"></i>
+          <i className="fa-solid fa-angle-right text-5xl"></i>
         </button>
       </div>
     </div>
