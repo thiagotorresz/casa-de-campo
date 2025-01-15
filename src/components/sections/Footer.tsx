@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 const Footer = () => {
   return (
     <footer className="py-2 bg-verde text-dourado" id="footer">

@@ -10,12 +10,12 @@ const Sobre = () => {
 
         {/* Texto sobre o local */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="text-gray-200 leading-relaxed montserrat">
+          <div className="text-gray-200 leading-relaxed indent-7 md:indent-0">
             <p>
               O Village Resort está localizado em uma área de preservação natural na Serra do Cipó. Possui 3.600.000m² de área verde com fauna e flora nativas da região. Hoje, conta com aproximadamenre 120.000m² de área construida, com infraestrutura, comodidades, lazer, acessibilidade e espaços pensados igualmente para todos.
             </p>
           </div>
-          <div className="text-gray-200 leading-relaxed montserrat">
+          <div className="text-gray-200 leading-relaxed indent-7 md:indent-0">
             <p>
               A Serra do Cipó, em Minas Gerais, é uma região de grande biodiversidade e um importante divisor de águas. O Parque Nacional da Serra do Cipó protege sua rica fauna e flora, incluindo cerrados, cachoeiras e sítios arqueológicos, sendo ideal para atividades ao ar livre e pesquisas científicas.
             </p>

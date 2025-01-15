@@ -3,51 +3,18 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-const Hero = () => {
-  const slides = [
-    {
-      type: 'image',
-      src: '/casa-de-campo/img/home/HOME-3.jpg',
-      alt: 'Home Slider',
-    },
-    {
-      type: 'image',
-      src: '/casa-de-campo/img/home/HOME-2.jpg',
-      alt: 'Home Slider',
-    },
-    {
-      type: 'image',
-      src: '/casa-de-campo/img/home/HOME.jpg',
-      alt: 'Home Slider',
-    },
-    {
-      type: 'image',
-      src: '/casa-de-campo/img/home/HOME-4.jpg',
-      alt: 'Home Slider',
-    },
-    {
-      type: 'image',
-      src: '/casa-de-campo/img/home/HOME-5.jpg',
-      alt: 'Home Slider',
-    },
-    {
-      type: 'image',
-      src: '/casa-de-campo/img/home/HOME-6.jpg',
-      alt: 'Home Slider',
-    },
-    {
-      type: 'image',
-      src: '/casa-de-campo/img/home/HOME-7.jpg',
-      alt: 'Home Slider',
-    },
-    {
-      type: 'image',
-      src: '/casa-de-campo/img/home/HOME-8.jpg',
-      alt: 'Home Slider',
-    },
-    
-  ];
+const slides = [
+  '/casa-de-campo/img/home/HOME-3.jpg',
+  '/casa-de-campo/img/home/HOME-2.jpg',
+  '/casa-de-campo/img/home/HOME.jpg',
+  '/casa-de-campo/img/home/HOME-4.jpg',
+  '/casa-de-campo/img/home/HOME-5.jpg',
+  '/casa-de-campo/img/home/HOME-6.jpg',
+  '/casa-de-campo/img/home/HOME-7.jpg',
+  '/casa-de-campo/img/home/HOME-8.jpg',
+];
 
+const Hero = () => {
   return (
     <div className="relative h-screen">
       {/* Swiper para os slides */}
@@ -55,58 +22,31 @@ const Hero = () => {
         modules={[Autoplay, EffectFade]}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         effect="fade"
-        fadeEffect={{ crossFade: true }}
         speed={1500}
         loop
-        className="relative h-full z-0"
+        className="h-full z-0"
       >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index} className="relative h-full">
-            {slide.type === 'image' ? (
-              <img
-                src={slide.src}
-                alt={slide.alt}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <video
-                src={slide.src}
-                className="w-full h-full object-cover"
-                autoPlay
-                muted
-                loop
-              />
-            )}
+        {slides.map((src, index) => (
+          <SwiperSlide key={index} className="h-full">
+            <img src={src} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black/20" />
           </SwiperSlide>
         ))}
       </Swiper>
 
       {/* Texto fixo sobre os slides */}
-      <div className="absolute inset-0 flex items-center justify-center z-10" id="home">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 text-center">
-          {/* Imagem centralizada e dimensionada */}
-          <div className="flex justify-center mb-8 drop-shadow-2xl md:mt-64">
-            <img
-              src="/casa-de-campo/img/LOGO_CASADECAMPO.png"
-              alt="Logo casa de campo"
-              className="w-48 md:w-58 lg:w-64 drop-shadow-2xl"
-            />
-          </div>
-
-          {/* Título e parágrafo alinhados */}
-          <div className="text-dourado">
-            <h1 className="font-adelia font-normal text-shandow sm:mb-6 sm:text-5xl md:text-6xl" style={{fontSize: '2.7rem'}}>
-              Você a uma assinatura do paraíso!
-            </h1>
-          </div>
-
-          <a href="#form">
-            <div className="flex justify-center">
-              <img src="/casa-de-campo/img/home/receba.png" alt="Saiba mais" className="w-8/12 md:w-6/12 lg:w-8/12" />
-            </div>
-          </a>
-        </div>
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-center mt-20" id="home">
+        <img
+          src="/casa-de-campo/img/LOGO_CASADECAMPO.png"
+          alt="Logo Casa de Campo"
+          className="w-48 md:w-58 lg:w-64 mb-8 drop-shadow-2xl md:mt-64"
+        />
+        <h1 className="font-adelia font-normal text-shandow text-dourado mb-6 text-4xl md:text-[2.7rem]">
+          Você a uma assinatura do paraíso!
+        </h1>
+        <a href="#form" className="w-8/12 md:w-4/12 lg:w-4/12">
+          <img src="/casa-de-campo/img/home/receba.png" alt="Saiba mais" />
+        </a>
       </div>
     </div>
   );

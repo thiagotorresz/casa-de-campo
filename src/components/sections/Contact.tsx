@@ -1,8 +1,10 @@
-import React from 'react';
-
 const Contact = () => {
+  const whatsappMessage = encodeURIComponent(
+    'Olá! Estava no site da Casa de Campo e Gostaria de saber mais sobre a assinatura.'
+  );
+
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center" id='contact'>
       {/* Informações de Contato */}
       <div className="text-center sm:text-left">
         <ul className="mt-2 space-y-6">
@@ -12,7 +14,7 @@ const Contact = () => {
               <span className="font-bold text-2xl">(31) 3157-7573</span>
             </li>
           </a>
-          <a href="https://wa.me/5531984760195?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Casa%20de%20Campo." className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-start" target="_blank">
+          <a href={`https://wa.me/5531984760195?text=${whatsappMessage}`} className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-start" target="_blank">
             <li className="flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:gap-4">
               <i className="text-4xl fab fa-whatsapp"></i>
               <span className="font-bold text-2xl">(31)9 8476-0195</span>

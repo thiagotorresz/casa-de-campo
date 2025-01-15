@@ -61,7 +61,3 @@ body {
 .h-bg{
   height: 90vh;
 }
-
-.bg-transparentee {
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-}

@@ -331,107 +331,105 @@ const Chales = () => {
           ))}
         </div>
 
-       {/* Modal */}
-{selectedChale && (
+        {/* Modal */}
+        {selectedChale && (
 
-  
-  <div
-    className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-    onClick={(e) => {
-      if (e.target === e.currentTarget) setSelectedChale(null);
-    }}
-  >
 
-    {/* Botão de fechar */}
-    <button
-        onClick={() => setSelectedChale(null)}
-        className="absolute top-2 right-8 text-7xl text-white hover:text-gray-400 z-10"
-      >
-        &times;
-      </button>
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) setSelectedChale(null);
+            }}
+          >
 
-    <div className="relative w-[80%] sm:h-[80%] bg-white rounded-lg overflow-hidden">
+            {/* Botão de fechar */}
+            <button
+              onClick={() => setSelectedChale(null)}
+              className="absolute top-2 right-8 text-7xl text-white hover:text-gray-400 z-10"
+            >
+              &times;
+            </button>
 
-      {/* Slider de Imagens */}
-      <div className="relative w-full sm:h-full">
-        {currentImageIndex === 0 && (
-          <div className="relative w-full h-full">
-            {/* Primeira imagem cobrindo toda a área */}
-            <img
-              src={selectedChale.images[0]}
-              alt={`Imagem do ${selectedChale.name}`}
-              className="w-full h-full object-cover"
-            />
-            {/* Nome do Chalé na parte inferior */}
-            <h3 className="md:absolute bottom-0 w-full italic text-white text-center bg-black bg-opacity-60 text-3xl font-bold py-4">
-              {selectedChale.name}
-            </h3>
-          </div>
-        )}
+            <div className="relative w-[80%] sm:h-[80%] bg-white rounded-lg overflow-hidden">
 
-        {currentImageIndex === 1 && (
-          <div className="flex flex-col md:flex-row w-full h-full">
-            {/* Informações de ambientes e diferenciais à esquerda */}
-            <div className="w-full md:w-1/3 bg-verde text-white p-8 flex flex-col justify-center">
-              <h4 className="text-3xl font-bold italic">{selectedChale.name}</h4>
-              <h4 className="text-3xl font-bold mb-4 italic">{selectedChale.area} m² construídos</h4>
-              <h4 className="text-lg font-bold">Ambientes:</h4>
-              <ul className="list-disc list-inside text-base">
-                {selectedChale.ambientes.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
+              {/* Slider de Imagens */}
+              <div className="relative w-full sm:h-full">
+                {currentImageIndex === 0 && (
+                  <div className="relative w-full h-full">
+                    {/* Primeira imagem cobrindo toda a área */}
+                    <img
+                      src={selectedChale.images[0]}
+                      alt={`Imagem do ${selectedChale.name}`}
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Nome do Chalé na parte inferior */}
+                    <h3 className="md:absolute bottom-0 w-full italic text-white text-center bg-black bg-opacity-60 text-3xl font-bold py-4">
+                      {selectedChale.name}
+                    </h3>
+                  </div>
+                )}
 
-              <h4 className="text-lg font-bold mt-6 ">Diferenciais:</h4>
-              <ul className="list-disc list-inside text-base">
-                {selectedChale.diferenciais.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
+                {currentImageIndex === 1 && (
+                  <div className="flex flex-col md:flex-row w-full max-h-screen md:h-full overflow-y-auto">
+                  {/* Informações de ambientes e diferenciais à esquerda */}
+                  <div className="w-full md:w-1/3 bg-verde text-white p-8 flex flex-col justify-center">
+                    <h4 className="text-2xl md:text-3xl font-bold italic uppercase">{selectedChale.name}</h4>
+                    <h4 className="text-base md:text-lg font-bold mb-4 italic">{selectedChale.area} m² construídos</h4>
+                    <h4 className="text-base md:text-lg font-bold">Ambientes:</h4>
+                    <ul className="list-disc list-inside text-sm md:text-base">
+                      {selectedChale.ambientes.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                
+                    <h4 className="text-base md:text-lg font-bold mt-6">Diferenciais:</h4>
+                    <ul className="list-disc list-inside text-sm md:text-base">
+                      {selectedChale.diferenciais.map((item, index) => (
+                        <li key={index}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                
+                  {/* Segunda imagem à direita */}
+                  <div className="w-full md:w-2/3 bg-verde flex justify-center items-center">
+                    <img
+                      src={selectedChale.images[1]}
+                      alt={`Imagem do ${selectedChale.name}`}
+                      className="w-full max-h-[40vh] md:max-h-full object-contain"
+                    />
+                  </div>
+                </div>
+                
+                )}
+
+                {currentImageIndex > 1 && (
+                  <div className="relative w-full h-full">
+                    {/* Outras imagens cobrindo toda a área */}
+                    <img
+                      src={selectedChale.images[currentImageIndex]}
+                      alt={`Imagem do ${selectedChale.name}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
+
+                {/* Botões de navegação */}
+                <button
+                  onClick={handlePrevImage}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado"
+                >
+                  <i className="fa-solid fa-angle-left text-5xl"></i>
+                </button>
+                <button
+                  onClick={handleNextImage}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado"
+                >
+                  <i className="fa-solid fa-angle-right text-5xl"></i>
+                </button>
+              </div>
             </div>
-
-            {/* Segunda imagem à direita */}
-            <div className="w-full md:w-2/3 bg-verde">
-              <img
-                src={selectedChale.images[1]}
-                alt={`Imagem do ${selectedChale.name}`}
-                className="w-full h-full object-contain"
-              />
-            </div>
           </div>
         )}
-
-        {currentImageIndex > 1 && (
-          <div className="relative w-full h-full">
-            {/* Outras imagens cobrindo toda a área */}
-            <img
-              src={selectedChale.images[currentImageIndex]}
-              alt={`Imagem do ${selectedChale.name}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        )}
-
-        {/* Botões de navegação */}
-        <button
-          onClick={handlePrevImage}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado"
-        >
-          <i className="fa-solid fa-angle-left text-5xl"></i>
-        </button>
-        <button
-          onClick={handleNextImage}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-shandow hover:text-dourado"
-        >
-          <i className="fa-solid fa-angle-right text-5xl"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-)}
-
-
-
       </div>
     </section>
   );
