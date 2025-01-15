@@ -88,21 +88,29 @@ const Comparativo = () => {
 
 
       {/* Benefícios com imagem ao lado MOBILE*/}
-      <div className="mt-12 relative overflow-hidden block md:hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+      <div
+        className="h-bg text-verde py-16 bg-white flex flex-col lg:flex-row items-center md:hidden overflow-hidden"
+        style={{
+          backgroundImage: "url('/casa-de-campo/img/background/beneficios-mb.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center lg:flex-row lg:items-start">
           {/* Texto */}
-          <div className="text-left bg-opacity-70 p-8 order-2 lg:order-1">
-            <h2 className="text-2xl leading-tight text-dourado mb-8 max-w-lg">
+          <div className="text-left bg-opacity-70 p-4 order-2 lg:order-1 mt-[15%] ml-[-6%]">
+            <h2 className=" text-lg leading-tight mb-14 max-w-lg">
               Quais são os benefícios
               da Casa de Campo <br />
-              <span className="font-adelia ml-16 text-3xl">por assinatura?</span>
+              <span className="font-adelia text-3xl ml-8">por assinatura?</span>
             </h2>
-            <p className="font-black italic text-white text-lg mb-4">
+            <p className="font-black italic text-lg mb-4 text-shandow">
               SERVIÇOS DE HOTEL NO CONFORTO <br />
               E EXCLUSIVIDADE DA SUA CASA
             </p>
             <ul
-              className="list-none italic space-y-3 text-base text-white uppercase">
+              className="list-none italic space-y-3 text-base uppercase font-bold text-shandow-white ">
               <li>▸ Sem burocracia na contratação;</li>
               <li>▸ Possibilidade de lazer imediato;</li>
               <li>▸ Menos despesas;</li>

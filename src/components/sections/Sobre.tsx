@@ -37,7 +37,7 @@ const Sobre = () => {
 
       {/* DESKTOP */}
       <div>
-        <img src="/casa-de-campo/img/background/resort.jpg" alt="" className="hidden md:block w-full h-auto" />
+        <img src="/casa-de-campo/img/background/resort.jpg" alt="Mapa Chalés" className="hidden md:block w-full h-auto" />
       </div>
 
       {/* MOBILE */}
